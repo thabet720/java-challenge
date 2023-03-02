@@ -2,6 +2,7 @@
 
 - Install packages with `mvn package`
 - Run `mvn spring-boot:run` for starting the application (or use your IDE)
+- Use Docker: Build the image and run the container. Run these commands in the project root(build command: `docker build -t api-demo .`  , run container command:`docker run -p 8080:8080 api-demo`).
 
 Application (with the embedded H2 database) is ready to be used ! You can access the url below for testing it :
 
@@ -10,43 +11,26 @@ Application (with the embedded H2 database) is ready to be used ! You can access
 
 > Don't forget to set the `JDBC URL` value as `jdbc:h2:mem:testdb` for H2 UI.
 
+#### Improvements
+- Added tests for the EmployeeController and EmployeeServiceImpl Classes
+- Added Validation for requests
+- Extended the project structure By adding DTO and converter layers
+- Added Exception Handling
+- Added endpoints responses
+- Secured endpoints with basic auth (username and password are admin)
+- Dockerized the API app
+- Added Caching using EhCache
+- Added documentation and comments
+- Fixed a bug when creating a new employee
 
+#### Technical Dept And Future Improvements
+- Increase the test coverage by adding more tests
+- Unify the endpoints responses more and cover more exception
+- Use a different auth mechanism (e.g JWT) instead Basic auth
+- Add a user service and user table implementation to avoid using the In-Memory user for the Auth
+- Improve cache configuration for better performance
 
-### Instructions
+#### Experience in Java
+- Been a software developer for 5 years and I used mostly Java 
+- For Spring/ Spring boot, if I can sum up my experience with it to around 3 years in total. I'm familiar with most of its features.
 
-- download the zip file of this project
-- create a repository in your own github named 'java-challenge'
-- clone your repository in a folder on your machine
-- extract the zip file in this folder
-- commit and push
-
-- Enhance the code in any ways you can see, you are free! Some possibilities:
-  - Add tests
-  - Change syntax
-  - Protect controller end points
-  - Add caching logic for database calls
-  - Improve doc and comments
-  - Fix any bug you might find
-- Edit readme.md and add any comments. It can be about what you did, what you would have done if you had more time, etc.
-- Send us the link of your repository.
-
-#### Restrictions
-- use java 8
-
-
-#### What we will look for
-- Readability of your code
-- Documentation
-- Comments in your code 
-- Appropriate usage of spring boot
-- Appropriate usage of packages
-- Is the application running as expected
-- No performance issues
-
-#### Your experience in Java
-
-Please let us know more about your Java experience in a few sentences. For example:
-
-- I have 3 years experience in Java and I started to use Spring Boot from last year
-- I'm a beginner and just recently learned Spring Boot
-- I know Spring Boot very well and have been using it for many years
